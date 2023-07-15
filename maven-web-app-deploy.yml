@@ -18,10 +18,10 @@ spec:
   spec: 
     containers:
     - name: mavenwebappcontainer
-      image: ashokit/mavenwebapp
+      image: ajay0/productloggingmavenwebapp
       imagePullPolicy: Always
       ports:
-      - containerPort: 8080
+      - containerPort: 8081
 ---
 apiVersion: v1
 kind: Service
