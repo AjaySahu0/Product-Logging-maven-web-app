@@ -35,14 +35,14 @@ node{
 }
     
     stage('Build Image'){
-        sh 'docker build -t ajay0/ProductLoggingmavenwebapp .'
+        sh 'docker build -t ajay0/productloggingmavenwebapp .'
     }
     
     stage('Push Image'){
         withCredentials([string(credentialsId: 'DOCKER-CREDENTIALS', variable: 'DOCKER_CREDENTIALS')]) {
             sh 'docker login -u ajay0-p ${DOCKER_CREDENTIALS}'
         }
-        sh 'docker push ajay0/ProductLoggingmavenwebapp'
+        sh 'docker push ajay0/productloggingmavenwebapp'
     }
     
     stage('Deploy App'){
